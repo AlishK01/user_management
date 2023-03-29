@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Blog</title>
+  
+  <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+  <div class="nav">
+    <ul>
+        <li><a class="private" href="/submit">SignUp</a></li>
+        <li><a class="private" href="/login.html">Login</a></li>
+        <li><a class="private"  href="/blog.html">Blogs</a></li>
+        <li><a class="active"  href="#blogs">Blogs</a></li>
+
+    </ul>
+</div>
+  <h1>Blog</h1>
+  <%if (blogs.length >0){ %>
+    <% blogs.forEach(function(row){ %>
+    <tr><div class="blog">
+        <div class="bl">
+            <% if(row.image){ %>
+                <img src="./uploads/<%= row.image %>" alt="profile image">
+              <% } %>
+    <br>
+  <td><%= row.title %></td><br>
+      <td><%= row.date%></td><br><br>
+      <td><%= row.content %></td>
+    </tr>
+    
+  </div>
+  
+</div>
+<button><a style="text-decoration:none" href="/edit">Edit</a></button>
+    <% })}else{ %>
+      <tr>
+          <td colspan="6">No Record Found</td>
+          
+        </tr>
+      <% } %>
+      <!-- <li><a href="/update">Update</a></li> -->
+      <td><button><a style="text-decoration:none" href="/update">Edit</a></button></td>
+    </div>
+</body>
+</html>

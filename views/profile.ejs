@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li><a class="private" href="/submit">SignUp</a></li>
+            <li><a class="active" href="#login">Login</a></li>
+            <li><a class="private" href="/blog.html">Blog</a></li>
+        </ul>
+    </div>
+    <h1>Profile</h1>
+    <div class="top">
+    <div class="imag">
+        <img src="./uploads/<%= form.image %>" alt="profile image">
+    </div>
+    <div class="hbody">
+    <p>User's Name is: <%=form.fname%>
+            <%=form.lname%>
+    </p>
+    <p>User's email id is: <%=form.email%>
+    </p>
+    <p>User's Phono No is: <%=form.phone%>
+    </p>
+    <p>User's Address is: <%=form.address%>
+    </p>
+    <p>User's Password is: <%=form.pass%>
+    </p>
+</div>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Contact Form</title>
+
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <div class="top">
+
+
+    </div>
+    <div class="nav">
+        <ul>
+            <li><a class="active" href="#home">SignUp</a></li>
+            <li><a class="private" href="/login1.html">Login</a></li>
+            <li><a class="private" href="/blog.html">Blog</a></li>
+        </ul>
+    </div>
+    <div class="head">
+        <p>Sign Up</p>
+        <div class="br">
+            <form id="formId" action="/submit" method="post" enctype="multipart/form-data">
+                <input type="text" id="fname" placeholder="Firstname" name="fname" required><br><br>
+                <input type="text" id="lname" name="lname" placeholder="Lastname" required><br><br>
+                <input type="file" id="image" name="image" required><br><br>
+                <input type="email" id="email" name="email" placeholder="xyz@gmail.com" required><br><br>
+                <input type="text" oninput="numberOnly(this.id)" id="phone" name="phone" placeholder="9100000000"
+                    maxlength="10" required><br><br>
+                <input type="password" id="pass" name="pass" placeholder="Password" required><br><br>
+                <textarea id="message" name="address" placeholder="Address" required></textarea><br><br>
+        </div>
+        <button type="submit" value="submit" name="submit">Submit</button>
+        </form>
+    </div>
+    <div class="tble">
+        <table border="1">
+            <%if (form1.length>0){ %>
+                <% form1.forEach(function(row){ %>
+                    <tr>
+                        <div>
+                            <td>
+                                <%= row.fname %>
+                            </td>
+                            <td>
+                                <%= row.lname%>
+                            </td>
+                            <td>
+                                <%= row.email%>
+                            </td>
+                            <td><button><a style="text-decoration:none" href="/login.html">view</a></button></td>
+                            <td><button><a  style="text-decoration:none" href="/update.html">update</a></button></td>
+                            <td><button><a style="text-decoration:none" href="/delete.html">delete</a></button></td></tr></div>
+
+    <% })}else{ %>
+        <tr>
+            <td colspan="6">No Record Found</td>
+
+        </tr>
+        <% } %>
+
+</body>
+
+</html>

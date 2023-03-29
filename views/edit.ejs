@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>update</title>
+</head>
+<body>
+    <body>
+        <div class="nav">
+          <ul>
+            <li><a class="private" href="/index.html">SignUp</a></li>
+            <li><a class="active" href="#login" >Login</a></li>
+            <li><a class="private" href="/blog.html">Blog</a></li>
+            <link rel="stylesheet" href="./index.css">
+          </ul>
+        </div>
+        <div class="head">
+          <p>update</p>
+          <div class="br">
+          <form id="formId" action="/blog/<%=id%>/edit" method="get" enctype="multipart/form-data">
+            <input type="text"id="uname" value="blog.title" placeholder="Enter Your Name" name="title" required><br><br>
+            <input type="file" id="image"   name="image" ><br><br>
+            <textarea id="message" value="blog.content"  name="content" required></textarea><br><br>
+        </div><br>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+    
+</body>
+</html>
